@@ -1,0 +1,16 @@
+<script>
+  jQuery(document).on('click','#helpdesk_ticket_submit',function(event){
+    if(jQuery('#cnt-reply').css('display') != 'none') {
+      console.log('click!');
+      alert('You have a reply open!!.\nPlease use the "Send and Set as ..." button or discard the reply!');
+      event.preventDefault();
+    }
+  });
+  jQuery(document).on('click','#helpdesk_ticket_submit_dup',function(event){
+    if(jQuery('#cnt-reply').css('display') != 'none') {
+      console.log('click!');
+      alert('You have a reply open!!.\nPlease use the "Send and Set as ..." button or discard the reply!');
+      event.preventDefault();
+    }
+  });
+</script>

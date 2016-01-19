@@ -1,0 +1,38 @@
+<script type="text/javascript">
+function sendToTrello(win,name,sel){
+  var source = win.location.host;
+  var url = encodeURIComponent(win.location.href);
+  var desc = '### Ticket Details:\n'+
+            '**Ticket ID:** [{{ticket.id}}]({{ticket.url}})\n' +
+            '**Ticket status:** {{ticket.status}}\n' +
+            '**Requester:** {{ticket.requester.name}} ({{ticket.requester.email}})\n' +
+            '**Company:** {{ticket.requester.company.name}}\n' +
+            '**Agent:** {{ticket.agent.name}}\n\n' +
+            '--------------------------\n' + 
+            sel;
+  win.open('https://trello.com/add-card'+
+           '?source='+source+
+           '&mode=popup'+
+           '&url='+url+
+           (name?'&name='+encodeURIComponent(name):'')+
+           (desc?'&desc='+encodeURIComponent(desc):''),
+           'add-trello-card',
+           'width=500,height=600,left='+(win.screenX+(win.outerWidth-500)/2)+
+           ',top='+(win.screenY+(win.outerHeight-740)/2));
+}
+</script>
+<div id="send_to_trello_freshplug" title="Send to trello FreshPlug">
+    <table width="100%">
+     <tr>
+      <td width="40%">
+        <a href="#" onclick="sendToTrello(window,'[#{{ticket.id}}] {{ticket.subject}} ({{ticket.requester.name}})',getSelection?getSelection().toString():'');">
+        <img alt="Send to Trello" src="https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/c13d1cd96a2cff30f0460a5e1860c5ea/header-logo-blue.svg" width="50%"/>
+       </a>
+      </td>
+      <td width="60%">
+       <b>Convert to a Trello card</b>
+       <p>Select a text if you want to add as description and then click on the Trello icon</p>
+      </td>
+     </tr>
+    </table>
+</div>
