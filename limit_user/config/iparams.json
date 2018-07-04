@@ -1,0 +1,33 @@
+{
+  "limited_user": {
+    "display_name": "Limited user",
+    "description": "Please enter the Agent email that you want to limit",
+    "type": "email",
+    "required": true
+  },
+  "freshdesk_domain": {
+    "display_name": "Freshdesk domain",
+    "description": "Please enter freshdesk subdomain - Example: 'dummy' if your Freshdesk domain is https://dummy.freshdesk.com",
+    "type": "text",
+    "required": true
+  },
+  "freshdesk_key": {
+    "display_name": "Freshdesk API Key",
+    "description": "Please enter freshdesk api key",
+    "type": "text",
+    "required": true
+  },
+  "available_fields": {
+    "display_name": "Available fields",
+    "description": "Please list here all the fields available to the limited user comma separated. Fields not mentioned here will be not editable by the limited user",
+    "type": "text",
+    "required": true
+  },
+  "auto_update_date_field": {
+    "display_name": "Auto update date field",
+    "description": "Name here a field that you want to auto update when the limited user changes the ticket properties, must be a date field",
+    "type": "text",
+    "required": false
+  }
+}
+

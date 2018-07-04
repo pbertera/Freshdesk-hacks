@@ -1,0 +1,16 @@
+{
+  "platform-version": "2.0",
+  "product": {
+    "freshdesk": {
+      "location": {
+        "ticket_background": {
+          "url": "template.html",
+          "id": "readOnlyFields"
+        }
+      }
+    }
+  },
+  "whitelisted-domains": [
+    "https://<%= iparam.freshdesk_domain %>.freshdesk.com" 
+  ]
+}
