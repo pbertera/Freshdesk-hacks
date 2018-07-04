@@ -9,3 +9,5 @@ The install procedure will ask you:
 * the API key, the API key is needed to retrieve the list of ticket attributes
 * available fields: a list of fields name (comma separated) that will be available for edit to the limited user
 * Auto update date field (not required): a field name that will be auto-updated when the limited user will change one of the available fields. This field will be updated with the current date and time.
+
+**NOTE:** into the setting *available fields* and *auto update date field* you have to enter the proper fields name, please look [here](https://support.freshdesk.com/support/solutions/articles/216548) how to retrieve the field name
